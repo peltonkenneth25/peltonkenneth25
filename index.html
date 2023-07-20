@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tour and an Excursion</title>
+    <meta property="og:title" content="Tour and an Excursion" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html/dist/default/lib.umd.js"
+      ></script>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <nav class="navbar-navbar navbar-root-class-name">
+          <a
+            href="https://pediaa.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="navbar-link"
+          >
+            <img
+              alt="Planical7012"
+              src="https://pediaa.com/wp-content/uploads/2016/12/logo_new.png"
+              class="navbar-branding-logo"
+            />
+          </a>
+          <div class="navbar-nav-content">
+            <div class="navbar-nav-links"></div>
+            <a
+              href="https://pediaa.com/about-us/"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="navbar-link1"
+            >
+              <div class="navbar-get-started get-started">
+                <span class="navbar-text">About Us</span>
+              </div>
+            </a>
+            <div id="open-mobile-menu" class="navbar-hamburger get-started">
+              <img
+                alt="image"
+                src="public/Icons/hamburger-200h.png"
+                class="navbar-image"
+              />
+            </div>
+          </div>
+          <div id="mobile-menu" class="navbar-mobile-menu">
+            <div class="navbar-branding">
+              <img
+                alt="image"
+                src="public/Branding/planical7012-ttpb.svg"
+                class="navbar-image1"
+              />
+              <div id="close-mobile-menu" class="navbar-container">
+                <svg viewBox="0 0 1024 1024" class="navbar-icon">
+                  <path
+                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="navbar-nav-links1">
+              <span class="nav-link">Features</span>
+              <span class="nav-link">Why us</span>
+              <span class="nav-link">Prices</span>
+              <span class="nav-link">Contact</span>
+            </div>
+            <div class="get-started">
+              <span class="navbar-text1">Get started</span>
+            </div>
+          </div>
+          <div>
+            <dangerous-html
+              html="<script>
+    /*
+Mobile menu - Code Embed
+*/
+
+/* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app, 
+the mobile menu will still work*/
+
+const listenForUrlChangesMobileMenu = () => {
+    let url = location.href;
+    document.body.addEventListener('click', () => {
+        requestAnimationFrame(() => {
+            if (url !== location.href) {
+                runMobileMenuCodeEmbed();
+                url = location.href;
+            }
+        });
+    },
+    true
+    );
+};
+
+const runMobileMenuCodeEmbed = () => {
+    // Mobile menu
+    const mobileMenu = document.querySelector('#mobile-menu')
+
+    // Buttons
+    const closeButton = document.querySelector('#close-mobile-menu')
+    const openButton = document.querySelector('#open-mobile-menu')
+
+    // On openButton click, set the mobileMenu position left to -100vw
+    openButton &amp;&amp; openButton.addEventListener('click', function() {
+        mobileMenu.style.transform = 'translateX(0%)'
+    })
+
+    // On closeButton click, set the mobileMenu position to 0vw
+    closeButton &amp;&amp; closeButton.addEventListener('click', function() {
+        mobileMenu.style.transform = 'translateX(100%)'
+    })
+}
+
+runMobileMenuCodeEmbed()
+listenForUrlChangesMobileMenu()
+</script>"
+            ></dangerous-html>
+          </div>
+        </nav>
+        <section class="home-section">
+          <div class="home-hero">
+            <div class="home-content">
+              <main class="home-main">
+                <header class="home-header">
+                  <h1 class="home-heading">
+                    Understanding the Distinction Between a Tour and an
+                    Excursion
+                  </h1>
+                  <span class="home-caption">
+                    So you're planning an overseas adventure and trying to
+                    decide between booking a tour or excursion once you arrive
+                    at your destination. What's the difference and which is the
+                    best choice for you? As an avid traveler, I get this
+                    question a lot from friends and family planning their
+                    vacations. The distinction really comes down to the level of
+                    independence and flexibility you want in your itinerary.
+                  </span>
+                </header>
+                <div class="home-buttons">
+                  <a
+                    href="https://pediaa.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link"
+                  >
+                    <div class="home-get-started button">
+                      <span class="home-text">Get started</span>
+                    </div>
+                  </a>
+                </div>
+              </main>
+            </div>
+            <div class="home-image">
+              <div class="home-container1">
+                <div class="home-container2">
+                  <img
+                    alt="image"
+                    src="https://www.traveldailymedia.com/assets/2021/07/shutterstock_1774042925-1.jpg"
+                    class="home-image01"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="home-image02">
+              <img
+                alt="image"
+                src="public/SectionImages/heroimage-900h.png"
+                class="home-image03"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="home-section1">
+          <div class="home-note">
+            <div class="home-content1">
+              <main class="home-main1">
+                <h2 class="home-heading1">
+                  What Makes a Tour a Tour and an Excursion an Excursion
+                </h2>
+                <p class="home-paragraph">
+                  <span class="home-text01">
+                    A tour and an excursion may seem similar, but there are a
+                    few key differences to understand before booking your trip.
+                  </span>
+                  <br class="home-text02" />
+                  <br class="home-text03" />
+                  <span class="home-text04">
+                    •Duration: A tour typically lasts a few hours to a full day,
+                    while an excursion is usually a multi-day trip involving
+                    overnight stays. Excursions allow for more in-depth
+                    exploration at a slower pace.
+                  </span>
+                  <br class="home-text05" />
+                  <br class="home-text06" />
+                  <span class="home-text07">
+                    •Focus: Tours generally provide an overview of an area's
+                    highlights, covering more ground in less time. Excursions
+                    focus on a particular theme or region, allowing for a deeper
+                    dive into topics of interest. They may visit out-of-the-way
+                    places not included on most tours.
+                  </span>
+                  <br class="home-text08" />
+                  <br class="home-text09" />
+                  <span class="home-text10">
+                    •Inclusiveness: Tours bundle together transportation,
+                    admission fees, and often a guide, while excursions
+                    typically include meals, accommodations, and options for
+                    unguided free time. Excursions feel more immersive since you
+                    have time to do your own thing.
+                  </span>
+                  <br />
+                </p>
+              </main>
+              <div class="home-explore-more">
+                <a
+                  href="https://pediaa.com/category/travel-tour/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link1"
+                >
+                  <p class="home-text12">Explore more -&gt;</p>
+                </a>
+              </div>
+            </div>
+            <div class="home-image04">
+              <img
+                alt="image"
+                src="https://huekit.com/wp-content/uploads/2019/04/travel-presets.jpg"
+                class="home-image05"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="home-section2">
+          <section class="home-note1">
+            <div class="home-image06">
+              <img
+                alt="image"
+                src="https://www.westend61.de/images/0000823514pw/portrait-of-happy-young-woman-hiking-in-the-mountains-PNEF00476.jpg"
+                class="home-image07"
+              />
+            </div>
+            <div class="home-content2">
+              <div class="home-main2">
+                <div class="home-caption1"></div>
+                <div class="home-heading2">
+                  <h2 class="section-heading">
+                    How Long Do Tours and Excursions Last?
+                  </h2>
+                  <p class="section-description">
+                    <span>
+                      When it comes to duration and depth of experience, tours
+                      and excursions can differ quite a bit. Excursions are
+                      usually shorter in length, lasting just a few hours up to
+                      a full day. Tours tend to be multi-day trips, ranging from
+                      2-3 days up to 2 weeks or more for an in-depth tour.
+                    </span>
+                    <br />
+                    <span>
+                      Excursions offer a quick taste of a destination, with a
+                      focus on hitting the highlights and providing an overview.
+                      These short trips are ideal if you're limited on time but
+                      still want to experience some of the essential
+                      attractions. Tours, on the other hand, give you the
+                      opportunity to dive deeper into a destination. You'll have
+                      more time to explore additional sites, go off the beaten
+                      path, immerse yourself in the local culture, and gain a
+                      richer understanding of the history and natural
+                      surroundings.
+                    </span>
+                    <br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-note2">
+            <div class="home-image08">
+              <img
+                alt="image"
+                src="https://www.goodshop.com/blog/wp-content/uploads/2016/05/162115522.png"
+                class="home-image09"
+              />
+            </div>
+            <div class="home-content3">
+              <main class="home-main3">
+                <header class="home-caption2"></header>
+                <main class="home-heading4">
+                  <header class="home-header1">
+                    <p class="section-description">
+                      <span>
+                        The duration of a tour also means overnight stays in a
+                        destination, allowing for more flexibility and free time
+                        in the evenings. You can wander on your own, dine at a
+                        leisurely pace, or just relax at your hotel. Multi-day
+                        tours often include more destinations within a country
+                        or region as well, so you get exposure to a wider array
+                        of places in a single trip.
+                      </span>
+                      <br />
+                      <br />
+                      <span>
+                        Of course, your travel priorities and personal interests
+                        should determine whether a quick excursion or in-depth
+                        tour is the right choice for you. An excursion may suit
+                        you perfectly if you prefer fast-paced travel, while a
+                        tour is ideal if you like to move at a more relaxed pace
+                        and gain deeper insights into a destination. Either way,
+                        both options provide an easy way to experience the
+                        highlights of a new place.
+                      </span>
+                      <br />
+                    </p>
+                  </header>
+                </main>
+              </main>
+              <a
+                href="https://pediaa.com/category/travel-tour/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-link2"
+              >
+                <div class="home-get-started1 button">
+                  <span class="home-text22">Get started</span>
+                </div>
+              </a>
+            </div>
+          </section>
+        </section>
+        <section class="home-section3">
+          <header class="home-header2">
+            <header class="home-left">
+              <h2 class="home-heading5 section-heading">
+                How You Get There Matters
+              </h2>
+            </header>
+            <div class="home-right"></div>
+          </header>
+          <main class="home-cards">
+            <section class="card-card card-root-class-name">
+              <main class="card-content">
+                <h1 class="card-header"><span>Motorcoaches</span></h1>
+                <p class="card-description">
+                  <span>
+                    Motorcoaches, also known as tour busses or charter busses,
+                    are a popular means of transportation for tours. As a tour
+                    participant, you simply board the coach at the designated
+                    meeting point and take a seat for the drive to each
+                    destination on the itinerary. The benefit of motorcoach
+                    transportation is that you can sit back and relax without
+                    having to focus on directions or traffic. The drawback is
+                    that you are confined to the coach’s schedule and stops. If
+                    you see something interesting, you can’t pull over to
+                    explore whenever you like.
+                  </span>
+                </p>
+              </main>
+            </section>
+            <section class="card-card card-root-class-name1">
+              <main class="card-content">
+                <h1 class="card-header"><span>Public Transit</span></h1>
+                <p class="card-description">
+                  <span>
+                    Some tours incorporate local public transit options like
+                    busses, trains, and ferries into the itinerary. This allows
+                    for an authentic experience traveling like a local. However,
+                    it may require more advance planning to ensure you make the
+                    right connections and transfers to meet the tour at each
+                    stop. Public transit tours also mean you share space with
+                    daily commuters and other travelers, so they tend to work
+                    best for destinations with efficient, tourist-friendly
+                    transit systems.
+                  </span>
+                </p>
+              </main>
+            </section>
+          </main>
+        </section>
+        <section class="home-section4">
+          <div class="home-note3">
+            <div class="home-image10">
+              <img
+                alt="image"
+                src="https://jooinn.com/images/hiking-25.jpg"
+                class="home-image11"
+              />
+            </div>
+            <div class="home-content4">
+              <div class="home-caption3"></div>
+              <div class="home-heading6">
+                <div class="home-header3">
+                  <h2 class="section-heading">
+                    What You Actually Do on a Tour vs. An Excursion
+                  </h2>
+                </div>
+                <div class="accordion-accordion accordion-root-class-name">
+                  <div
+                    data-role="accordion-container"
+                    class="accordion-element"
+                  >
+                    <div class="accordion-details">
+                      <span class="accordion-text">
+                        <span>Activities</span>
+                      </span>
+                      <span
+                        data-role="accordion-content"
+                        class="accordion-text1"
+                      >
+                        <span>
+                          When you go on a tour, the activities are typically
+                          more structured and rigid. The itinerary is set by the
+                          tour company to efficiently show you the highlights of
+                          a destination in a limited amount of time. You’ll
+                          follow a guide, stick to a schedule, and move from
+                          spot to spot with the group. The experiences tend to
+                          be more passive, as you listen to commentary from the
+                          guide about what you’re seeing.
+                        </span>
+                      </span>
+                    </div>
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      data-role="accordion-icon"
+                      class="accordion-icon"
+                    >
+                      <path
+                        d="M366 708l196-196-196-196 60-60 256 256-256 256z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    data-role="accordion-container"
+                    class="accordion-element1 accordion-element"
+                  >
+                    <div class="accordion-details1">
+                      <span class="accordion-text2">
+                        <span>Time Frame</span>
+                      </span>
+                      <span
+                        data-role="accordion-content"
+                        class="accordion-text3"
+                      >
+                        <span>
+                          Tours are typically day trips or last 1 to 2 weeks.
+                          They aim to show you the major highlights of a
+                          destination within a limited time period. Excursions
+                          tend to be more open-ended, lasting anywhere from half
+                          a day up to several months for extended travel. You
+                          have more flexibility to set your own pace and linger
+                          longer in places that interest you. Excursions are
+                          better suited if you want an in-depth exploration of a
+                          destination without time constraints.
+                        </span>
+                      </span>
+                    </div>
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      data-role="accordion-icon"
+                      class="accordion-icon2"
+                    >
+                      <path
+                        d="M366 708l196-196-196-196 60-60 256 256-256 256z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="home-footer">
+          <div class="home-content5">
+            <main class="home-main-content">
+              <div class="home-content6">
+                <header class="home-main4">
+                  <div class="home-header4">
+                    <img
+                      alt="image"
+                      src="https://pediaa.com/wp-content/uploads/2016/12/logo_new.png"
+                      class="home-branding"
+                    />
+                    <span class="home-text23">
+                      Pediaa is a learning powerhouse.
+                    </span>
+                  </div>
+                </header>
+              </div>
+              <section class="home-copyright">
+                <span class="home-text24">Copyright © 2017 Pediaa.Com.</span>
+              </section>
+            </main>
+            <main class="home-subscribe"></main>
+            <section class="home-copyright1">
+              <span class="home-text25">
+                © 2022 latitude. All Rights Reserved.
+              </span>
+            </section>
+          </div>
+        </footer>
+        <div>
+          <dangerous-html
+            html="<script>
+    /*
+Accordion - Code Embed
+*/
+
+/* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
+the Accordions will still work*/
+
+const listenForUrlChangesAccordion = () => {
+      let url = location.href;
+      document.body.addEventListener(
+        'click',
+        () => {
+          requestAnimationFrame(() => {
+            if (url !== location.href) {
+              runAccordionCodeEmbed();
+              url = location.href;
+            }
+          });
+        },
+        true
+      );
+    };
+
+
+const runAccordionCodeEmbed = () => {
+    const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+    const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+    const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
+
+    accordionContents.forEach((accordionContent) => {
+        accordionContent.style.display = 'none'; //Hides all accordion contents
+    });
+
+    accordionContainers.forEach((accordionContainer, index) => {
+        accordionContainer.addEventListener('click', () => {
+            accordionContents.forEach((accordionContent) => {
+            accordionContent.style.display = 'none'; //Hides all accordion contents
+            });
+
+            accordionIcons.forEach((accordionIcon) => {
+                accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+            });
+
+            accordionContents[index].style.display = 'flex'; // Shows accordion content
+            accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+        });
+    });
+}
+
+runAccordionCodeEmbed()
+listenForUrlChangesAccordion()
+
+/*
+Here's what the above is doing:
+    1. Selects all accordion containers, contents, and icons
+    2. Hides all accordion contents
+    3. Adds an event listener to each accordion container
+    4. When an accordion container is clicked, it:
+        - Hides all accordion contents
+        - Resets all icon transforms to 0deg (default)
+        - Checks if this container has class 'accordion-open'
+            - If it does, it removes class 'accordion-open'
+            - If it doesn't, it:
+                - Removes class 'accordion-open' from all containers
+                - Adds class 'accordion-open' to this container
+                - Shows accordion content
+                - Rotates accordion icon 180deg
+*/
+</script>"
+          ></dangerous-html>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
